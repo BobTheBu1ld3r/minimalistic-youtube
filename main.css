@@ -16,3 +16,9 @@ body{
     justify-content: center;
     height: 100vh;
 }
+
+input{
+    width: 520px;
+    height: 40px;
+    border-radius: 15px;
+}
