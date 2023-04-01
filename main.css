@@ -1,9 +1,40 @@
 :root{
-    --dark-primary: #ffffffe0;
-    --dark-secondary: hsl(0, 0%, 18.82%);
+    --primary-color: #ffffffe0;
+    --border-color: rgb(48, 48, 48);
     --dark-background: hsl(0, 0%, 7%);
-    --dark-search-bar-background: #121212;
+    --primary-background: #0f0f0f;
+    --search-bar-background: #121212;
+    --button-background: rgb(48,48,48);
+    --search-bar-shadow: none;
+    --icon-color: rgb(136, 136, 136);
 }
+
+:root.light{
+    --primary-color: rgb(17, 17, 17);
+    --dark-secondary: rgb(204, 204, 204);
+    --dark-background: #fff;
+    --primary-background: #fff;
+    --search-bar-background: #fff;
+    --button-background: #f8f8f8;
+    --search-bar-shadow: rgb(238, 238, 238) 0px 1px 20px 0px inset;
+    --icon-color: rgb(73, 73, 73);
+}
+
+@media (prefers-color-scheme: light)
+{
+    :root{
+        --primary-color: rgb(17, 17, 17);
+        --dark-secondary: rgb(204, 204, 204);
+        --dark-background: #fff;
+        --primary-background: #fff;
+        --search-bar-background: #fff;
+        --button-background: #f8f8f8;
+        --search-bar-shadow: rgb(238, 238, 238) 0px 1px 20px 0px inset;
+        --icon-color: rgb(63, 63, 63);
+    }
+}
+
+
 
 html {
     box-sizing: border-box;
@@ -23,8 +54,8 @@ body{
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #0f0f0f;
-    color: var(--dark-primary);
+    background-color: var(--primary-background);
+    color: var(--primary-color);
 }
 
 .container {
@@ -32,25 +63,29 @@ body{
 
 }
 
+
+
 .search-container{
-    border: 1px solid var(--dark-secondary);
-    background-color: var(--dark-search-bar-background);
+    border: 1px solid var(--border-color);
+    border-right: none;
+    background-color: var(--search-bar-background);
     padding-left: 16px;
     padding-right: 4px;
     display: flex;
     align-items: center;
     border-radius: 40px 0px 0px 40px;
+    box-shadow: var(--search-bar-shadow);
 
 }
 
 input{
-    width: 520px;
-    height: 35px;
+    width: 620px;
+    height: 50px;
     background-color: rgba(0,0,0,0);
     border: none;
     color: inherit;
-    padding-left: 1px;
-    font-size: 16px;
+    padding-left: 3px;
+    font-size: 20px;
 }
 
 input:focus-visible{
@@ -58,12 +93,12 @@ input:focus-visible{
 }
 
 button {
-    height: 40px;
-    width: 58px;
-    background-color: var(--dark-secondary);
+    height: 55px;
+    width: 70px;
+    background-color: var(--button-background);
     box-shadow: none;
     border: none;
-    border: 1px solid var(--dark-secondary);
+    border: 1px solid var(--border-color);
     border-radius: 0px 40px 40px 0px;
     color: inherit;
     display: flex;
@@ -73,4 +108,10 @@ button {
 
 img{
     width: 16px;
+}
+
+.icon{
+    stroke: var(--icon-color);
+    height: 0px;
+    scale: 0.55 ;
 }
