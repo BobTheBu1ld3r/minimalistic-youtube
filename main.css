@@ -28,8 +28,8 @@
         --dark-background: #fff;
         --primary-background: #fff;
         --search-bar-background: #fff;
-        --button-background: #f8f8f8;
-        --search-bar-shadow: rgb(238, 238, 238) 0px 1px 20px 0px inset;
+        --button-background: #ebebeb;
+        --search-bar-shadow: rgb(238, 238, 238) 1px 1px 20px 0px inset;
         --icon-color: rgb(63, 63, 63);
     }
 }
@@ -62,8 +62,6 @@ body{
     display: flex;
 
 }
-
-
 
 .search-container{
     border: 1px solid var(--border-color);
